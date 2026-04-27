@@ -20,7 +20,7 @@
             padding: 40px 20px;
         }
 
-        /* main card container similar to freeprivacypolicy.com live pages */
+        /* main container */
         .privacy-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -37,7 +37,6 @@
             }
         }
 
-        /* headings */
         h1 {
             font-size: 32px;
             font-weight: 700;
@@ -87,7 +86,7 @@
             border-radius: 0 12px 12px 0;
         }
 
-        /* definition lists (terms) */
+        /* definitions panel */
         .definitions {
             background: #f9fafb;
             border-left: 4px solid #10b981;
@@ -99,7 +98,6 @@
         .definitions p {
             margin-bottom: 12px;
         }
-
         .definitions strong {
             color: #0f3b2c;
         }
@@ -107,17 +105,8 @@
         ul, ol {
             margin: 12px 0 20px 28px;
         }
-
         li {
             margin-bottom: 6px;
-        }
-
-        .inline-code {
-            background: #f1f5f9;
-            padding: 2px 8px;
-            border-radius: 20px;
-            font-family: monospace;
-            font-size: 0.9em;
         }
 
         hr {
@@ -140,9 +129,17 @@
             color: #10b981;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
+        }
+
+        .contact-links {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .contact-links li {
+            margin-bottom: 12px;
         }
 
         @media print {
@@ -154,9 +151,6 @@
                 max-width: 100%;
                 padding: 0.5in;
                 box-shadow: none;
-            }
-            h2, h3 {
-                page-break-after: avoid;
             }
         }
     </style>
@@ -181,7 +175,7 @@
         <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service (optional Google Sign-In).</p>
         <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
         <p><strong>Application</strong> refers to Nidhi, the software program provided by the Company.</p>
-        <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Nidhi (developer: Pruthvi Raj CP).</p>
+        <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Nidhi.</p>
         <p><strong>Country</strong> refers to: Karnataka, India.</p>
         <p><strong>Device</strong> means any device that can access the Service such as a smartphone or a digital tablet.</p>
         <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual. For Nidhi, this includes: first name and last name (optional offline profile), email address (only if you sign in with Google), and Usage Data.</p>
@@ -282,8 +276,9 @@
 
     <h2>Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-    <ul>
-        <li>By email: <a href="mailto:clef2k22@gmail.com">clef2k22@gmail.com</a></li>
+    <ul class="contact-links">
+        <li>📧 By email: <a href="mailto:clef2k22@gmail.com">clef2k22@gmail.com</a></li>
+        <li>👨‍💻 Developer Portfolio: <a href="https://ram-clef.github.io/portfolio/" target="_blank" rel="noopener noreferrer">https://ram-clef.github.io/portfolio/</a></li>
     </ul>
 
     <hr />
