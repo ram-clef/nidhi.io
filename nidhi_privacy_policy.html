@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nidhi - Privacy Policy & Official Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef2f8;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            padding: 40px 20px;
+            color: #1a2c3e;
+        }
+
+        .document-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 48px 56px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .document-container {
+                max-width: 100%;
+                padding: 0.7in;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .badge, .btn-print, .no-print {
+                display: none;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            pre, table {
+                page-break-inside: avoid;
+            }
+        }
+
+        .doc-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 24px;
+        }
+        .app-name {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f766e, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+        .version-tag {
+            color: #4b6b8f;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        .badge {
+            background: #10b98110;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 13px;
+            color: #0f766e;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+        .btn-print {
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 24px;
+            float: right;
+            transition: 0.2s;
+        }
+        .btn-print:hover {
+            background: #0f172a;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: #0f172a;
+            border-left: 5px solid #10b981;
+            padding-left: 18px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #2d3a4b;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: #2c3e4e;
+        }
+        .legal-meta {
+            color: #5b6e8c;
+            font-size: 14px;
+            margin-bottom: 24px;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f8fafc;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #eef2ff;
+            font-weight: 700;
+            color: #0c4a6e;
+        }
+        code, pre {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+        }
+        .permission-grid {
+            display: block;
+            background: #f9f9ff;
+            border-radius: 20px;
+            padding: 0px;
+            margin: 20px 0;
+        }
+        .perm-name {
+            font-weight: 700;
+            color: #0f3b2c;
+        }
+        hr {
+            margin: 32px 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #cbd5e1, #10b981, #cbd5e1);
+        }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 13px;
+            color: #6c86a3;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        ul, .custom-list {
+            margin-left: 28px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        @media (max-width: 700px) {
+            .document-container {
+                padding: 24px 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="document-container" id="docContent">
+    <div class="clearfix">
+        <button class="btn-print" onclick="window.print();">📄 Save as PDF / Print (to DOCX)</button>
+    </div>
+    <div class="doc-header">
+        <div class="app-name">Nidhi</div>
+        <div class="version-tag">Personal Finance — Offline First, Absolute Privacy</div>
+        <div class="badge">🔒 100% Local Storage · No Cloud Servers · Total Control</div>
+    </div>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated:</strong> April 27, 2026</p>
+    <p>This Privacy Policy describes Our policies on the collection, use and disclosure of Your information when You use the Nidhi App. By using Nidhi, You agree to the practices described in this document. <strong>All your financial records (income, expenses, categories, accounts) are stored only on your device using encrypted Room Database. We never access, transmit or sell your financial data.</strong></p>
+
+    <h2>Interpretation & Definitions</h2>
+    <h3>Interpretation</h3>
+    <p>Capitalized words have specific meanings. The definitions apply regardless of singular or plural.</p>
+    <h3>Definitions</h3>
+    <table>
+        <tr><th>Term</th><th>Definition</th></tr>
+        <tr><td><strong>Application</strong></td><td>Nidhi software (Android app).</td></tr>
+        <tr><td><strong>Company</strong></td><td>Nidhi (Developer: Pruthvi Raj CP).</td></tr>
+        <tr><td><strong>Device</strong></td><td>Smartphone or tablet running the app.</td></tr>
+        <tr><td><strong>Personal Data</strong></td><td>Information like name, email (only if you opt in to Google Sign-In).</td></tr>
+        <tr><td><strong>Service</strong></td><td>Nidhi mobile application features.</td></tr>
+        <tr><td><strong>You</strong></td><td>User of Nidhi.</td></tr>
+    </table>
+
+    <h2>Collecting and Using Your Personal Data</h2>
+    <h3>Types of Data Collected</h3>
+    <p><strong>Offline Mode (default):</strong> You can use Nidhi without any account. You may optionally enter a display name — this stays locally and is never transmitted. No personal information is required.</p>
+    <p><strong>Google Sign-In (Optional):</strong> If you choose to enable backup/restore via Google Drive, Nidhi uses Google Sign-In. When signed in, we receive your name, email address, and profile picture URL. <strong>Your transaction data remains on your device or your private Google Drive — never on our servers.</strong> You can sign out at any time, and all backup data remains under your Google account control.</p>
+    <p><strong>Screenshot Data (Premium Feature):</strong> When you import payment receipts via screenshot, all OCR processing occurs entirely on your device. Images are never uploaded to any external server. Extracted information is only used to prefill transaction fields.</p>
+    <p><strong>QR Code Device Transfer:</strong> You may transfer transaction data between devices using QR codes. This is a direct device-to-device transfer — no intermediate servers, no cloud storage.</p>
+    <p><strong>No Analytics / Tracking:</strong> Nidhi does not embed any analytics SDKs or third-party tracking tools that collect personal information.</p>
+
+    <h3>Use of Your Personal Data</h3>
+    <p>We may use Personal Data only for: providing offline functionality, optional Google Backup (if enabled), improving stability, and responding to support requests. We do not sell or rent any information.</p>
+
+    <h3>Sharing & Disclosure</h3>
+    <p>We do not share personal data with third parties except: when required by law, during a merger/acquisition, or with explicit consent. Authentication services (Google) process data according to their own privacy policies.</p>
+
+    <h2>Retention & Deletion of Data</h2>
+    <p>All financial transactions reside in local Room Database. You can delete individual transactions, use "Delete All Data" inside settings, or uninstall the app to permanently erase everything. Google Sign-In data is removed when you sign out.</p>
+
+    <h2>Security of Your Data</h2>
+    <p>Local data is stored using encrypted SQLite (Room). Since the app does not transmit financial records over the internet, the risk of exposure is minimal. For optional Google Drive backup, data is encrypted during transit using OAuth 2.0 standards.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The Service is not intended for children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Links to Other Websites</h2>
+    <p>Nidhi may include links to external support resources (GitHub, email). We are not responsible for third-party privacy practices.</p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update the policy from time to time. The "Last updated" date will reflect changes. Continued use of Nidhi constitutes acceptance.</p>
+
+    <h2>Contact Us</h2>
+    <p>For questions regarding privacy or this policy, contact: <strong>clef2k22@gmail.com</strong></p>
+
+    <hr />
+
+    <!-- PLAY STORE LISTING (removed UPI payments mention) -->
+    <h1>📱 Google Play Store Information</h1>
+    <h2>Short Description (80 characters)</h2>
+    <p><code>Track expenses, analyze spending, import screenshots, QR transfer. Offline-first privacy.</code></p>
+
+    <h2>Long Description (Full Length)</h2>
+    <pre style="white-space: pre-wrap; font-family: inherit; background: #f8fafc; border-radius: 16px;">
+Nidhi - Your Personal Finance Tracker (Privacy First)
+
+Take complete control of your money with Nidhi — the expense tracker that never sends your data to the cloud. All records stay on your device.
+
+📊 Track Every Transaction
+- Add income and expenses in seconds
+- Categorize spending, manage multiple accounts (Cash, Bank, etc.)
+- Add notes, descriptions, and bookmark important entries
+
+📈 Powerful Statistics & Charts
+- Interactive graphs: daily, weekly, monthly, yearly views
+- Category breakdown, profit/loss trends
+- Know exactly where your money goes
+
+📸 Smart Import from Screenshot (Premium)
+- Upload payment screenshots from gallery or capture via camera
+- Automatically extract amount, date, and description using on-device OCR
+- Supports Google Pay, PhonePe, Paytm receipts
+- Images never leave your device
+
+🔄 Data Transfer & Backup (Your Control)
+- Export all transactions to XLSX spreadsheet
+- Import from XLSX files to restore data
+- Transfer data between devices via QR codes (device-to-device)
+- Optional Google Sign-In to backup/restore from your private Google Drive
+
+🔒 Absolute Privacy
+- Everything stored locally in encrypted Room Database
+- No internet required for core tracking features
+- Screenshot OCR runs on-device (no external processing)
+- QR transfer is direct, no middleman servers
+
+🎨 Material Design & Customization
+- Light, Dark, and System default themes
+- Multiple accent colors: Teal, Indigo, Coral, Navy, Slate, Cyan
+- Smooth, intuitive interface
+
+Perfect for daily expense tracking, small business bookkeeping, and anyone who values privacy over cloud dependence.
+
+No subscriptions. Premium features via one-time purchase only.
+
+Download Nidhi and experience finance tracking without surveillance.
+    </pre>
+
+    <h2>Permissions Explained (Accurate & Detailed)</h2>
+    <div class="permission-grid">
+        <table style="width:100%">
+            <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>android.permission.CAMERA</strong></td>
+                    <td>Used to scan QR codes for device-to-device data transfer and to capture payment receipt screenshots (premium OCR feature). The camera is never used without explicit user action.</td>
+                </tr>
+                <tr>
+                    <td><strong>android.permission.READ_EXTERNAL_STORAGE</strong><br>(maxSdkVersion 32)</td>
+                    <td>Required only when you select a payment screenshot from your gallery for transaction import. No other files are read. Android 13+ uses photo picker.</td>
+                </tr>
+                <tr>
+                    <td><strong>android.permission.INTERNET</strong></td>
+                    <td>Internet is used <strong>only</strong> for optional Google Sign-In (to enable backup/restore from your Google Drive) and if you choose to use QR transfer generation which requires local network permission. The core expense tracking, statistics, and screenshot OCR work 100% offline. No telemetry or data exfiltration occurs.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 12px;"><strong>✅ Note to reviewers:</strong> Nidhi does not transmit financial data to any external servers. Internet is limited to optional Google authentication and QR generation handshake. All user data stays local or under user's own Google Drive.</p>
+    </div>
+
+    <h2>Content Rating Summary (Play Console)</h2>
+    <table>
+        <tr><th>Category</th><td>Finance</td></tr>
+        <tr><th>Contains ads?</th><td>No</td></tr>
+        <tr><th>Targets children under 13?</th><td>No</td></tr>
+        <tr><th>Collects personal data?</th><td>Optionally (name/email only if Google Sign-In used)</td></tr>
+        <tr><th>Account creation mandatory?</th><td>No — fully usable offline without any account</td></tr>
+        <tr><th>User-generated content?</th><td>No (transactions are local to user device)</td></tr>
+    </table>
+
+    <hr />
+
+    <h1>📦 Data Management & Safety</h1>
+    <ul>
+        <li><strong>Local storage technology:</strong> Room Database (SQLite) with encryption.</li>
+        <li><strong>Supported backup methods:</strong> Export to XLSX, QR code transfer between devices, and optional Google Drive backup (via Google Sign-In).</li>
+        <li><strong>Import methods:</strong> XLSX file, QR code scan, on-device screenshot OCR.</li>
+        <li><strong>Deletion capabilities:</strong> Single transaction delete, bulk delete, full reset from Settings → Delete All Data.</li>
+        <li><strong>No third-party tracking SDKs:</strong> No Firebase Analytics, no Crashlytics, no Ads libraries.</li>
+    </ul>
+
+    <h2>Data Safety Section (for Play Store requirement)</h2>
+    <p><strong>Data not collected:</strong> Location, contacts, microphone, biometrics, health data, financial account credentials, browsing history. <br>
+    <strong>Data encrypted in transit:</strong> Only for Google Sign-In OAuth flow and Google Drive backups (user's own cloud). <br>
+    <strong>Data deletion policy:</strong> Users can permanently delete all data via in-app settings or by uninstalling the app.</p>
+
+    <hr />
+
+    <h1>👨‍💻 Developer & Compliance</h1>
+    <table>
+        <tr><th>Developer Name</th><td>Pruthvi Raj CP</td></tr>
+        <tr><th>Contact Email</th><td>clef2k22@gmail.com</td></tr>
+        <tr><th>Country / Jurisdiction</th><td>Karnataka, India</td></tr>
+        <tr><th>Open Source Components</th><td>Room Database, ML Kit (on-device OCR), Gson, Apache POI (XLSX handling)</td></tr>
+    </table>
+    <p style="margin-top: 20px;"><strong>© 2026 Nidhi</strong> — Privacy by design. This document serves as the official Privacy Policy and Play Store metadata reference.</p>
+    <footer>
+        📄 To generate DOCX: Print this page (Ctrl+P) → Save as PDF → then use Microsoft Word or Google Docs to convert PDF to DOCX.  
+        <br>Last compiled: April 27, 2026 | For privacy inquiries: clef2k22@gmail.com
+    </footer>
+</div>
+</body>
+</html>
