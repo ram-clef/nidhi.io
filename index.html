@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Privacy Policy for Nidhi: optional bank SMS and payment-notification imports, local financial records, backups, permissions, app lock, data deletion, and developer contact.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+    <link rel="canonical" href="https://ram-clef.github.io/nidhi.io/">
     <title>Privacy Policy for Nidhi</title>
     <style>
-        /* Reset & base styling - clean, readable, print-friendly */
+/* Reset & base styling - clean, readable, print-friendly */
         * {
             margin: 0;
             padding: 0;
@@ -153,139 +157,229 @@
                 box-shadow: none;
             }
         }
+    
+
+        /* Updated policy content retains the original single-container layout. */
+        html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+        header { margin-bottom: 24px; }
+        .brand { display: inline-flex; align-items: center; gap: 10px; color: #126a57; font-weight: 750; letter-spacing: .04em; margin-bottom: 16px; }
+        .mark { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: #126a57; color: #fff; font-size: 20px; }
+        .lead { font-size: 17px; color: #526575; }
+        .meta, .small { font-size: 14px; color: #526575; }
+        .meta { border-left: 3px solid #10b981; padding: 12px 16px; background: #f9fafb; border-radius: 0 12px 12px 0; }
+        .summary, nav { background: #f4faf7; border: 1px solid #dcece5; border-radius: 14px; padding: 20px 24px; margin: 24px 0; }
+        .summary h2, nav h2 { margin-top: 0; }
+        .summary ul { margin-bottom: 0; }
+        nav ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; list-style: none; margin: 0; }
+        nav li { margin-bottom: 8px; }
+        a { color: #087956; text-underline-offset: 3px; overflow-wrap: anywhere; }
+        a:focus-visible { outline: 3px solid #087956; outline-offset: 4px; border-radius: 3px; }
+        .table-wrap { overflow-x: auto; margin-bottom: 20px; }
+        table { width: 100%; min-width: 540px; border-collapse: collapse; font-size: 14px; }
+        th, td { text-align: left; vertical-align: top; padding: 12px; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f4faf7; }
+        code { font-size: .9em; overflow-wrap: anywhere; }
+        .notice { padding: 16px 20px; border-radius: 12px; background: #fff6e5; border-left: 4px solid #d4a140; margin: 20px 0; }
+        .contact { font-size: 18px; font-weight: 650; }
+        .developer-card { margin-top: 28px; padding: 24px; border: 1px solid #d8e8e1; background: #f4faf7; border-radius: 16px; }
+        .developer-eyebrow { font-size: 11px; letter-spacing: .12em; color: #526575; font-weight: 700; }
+        .developer-card h3 { margin: 6px 0 8px; }
+        .developer-card p { font-size: 14px; }
+        .developer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+        .developer-links a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; padding: 9px 14px; border: 1px solid #cbded5; border-radius: 10px; background: #fff; font-size: 14px; font-weight: 600; }
+        .developer-links .portfolio-link { background: #126a57; color: #fff; border-color: #126a57; }
+        @media (max-width: 750px) { nav ul { grid-template-columns: 1fr; } .summary, nav, .developer-card { padding: 18px; } }
+        @media (max-width: 420px) { body { padding: 20px 12px; } .privacy-container { padding: 24px 18px; } h1 { font-size: 28px; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        @media print { nav { display: none; } .developer-card, .summary { background: #fff; } .developer-links a { color: #000; background: #fff; } }
     </style>
 </head>
-<body>
-<div class="privacy-container">
+<body id="top">
+<main class="privacy-container">
+
+  <header>
+    <div class="brand"><span class="mark" aria-hidden="true">₹</span> NIDHI</div>
     <h1>Privacy Policy for Nidhi</h1>
-    <div class="last-updated">
-        <strong>Last updated:</strong> April 27, 2026
+    <p class="lead">Your finances, your choices. This policy explains what Nidhi accesses, where information is processed, and how you can control or delete it.</p>
+    <p class="meta">Last updated: <time datetime="2026-11-03">3 November 2026</time><br>
+      App: <strong>Nidhi</strong> · Package: <code>in.clef.nidhi</code> · Also identified internally as MoneyLedger<br>
+      Developer: <strong>Pruthvi Raj CP</strong> · Contact: <a href="mailto:clef2k22@gmail.com">clef2k22@gmail.com</a></p>
+  </header>
+
+  <aside class="summary" aria-label="Privacy at a glance">
+    <h2>At a glance</h2>
+    <ul>
+      <li>Your ledger and budget calculations are stored and processed on your device.</li>
+      <li>SMS reading, payment-notification reading, Google Drive backup, and biometric app lock are optional. You can use manual entry without enabling them.</li>
+      <li>We do not operate a Nidhi server for storing your ledger or sell your personal or financial information.</li>
+      <li>Information can leave your device when you choose Google services, backups, exports, sharing, or support. Google SDKs may also process technical diagnostics as explained below.</li>
+    </ul>
+  </aside>
+
+  <nav aria-label="Policy contents">
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#information">1. Information Nidhi uses</a></li>
+      <li><a href="#sms">2. Optional bank SMS reading</a></li>
+      <li><a href="#notifications">3. Optional notification reading</a></li>
+      <li><a href="#images">4. Screenshots, camera and QR tools</a></li>
+      <li><a href="#backups">5. Google sign-in, backups and sharing</a></li>
+      <li><a href="#permissions">6. Permissions and reminders</a></li>
+      <li><a href="#security">7. App lock and security</a></li>
+      <li><a href="#services">8. Service providers and diagnostics</a></li>
+      <li><a href="#retention">9. Retention</a></li>
+      <li><a href="#delete">10. Access, deletion and withdrawal</a></li>
+      <li><a href="#children">11. Children and family use</a></li>
+      <li><a href="#website">12. This website</a></li>
+      <li><a href="#changes">13. Changes to this policy</a></li>
+      <li><a href="#contact">14. Contact &amp; developer</a></li>
+    </ul>
+  </nav>
+
+  <section id="information">
+    <h2>1. Information Nidhi uses</h2>
+    <p>Nidhi is a personal income, expense and budget-management app. It uses information you enter, import or permit it to read to maintain your ledger, calculate spending limits, display History and Stats, manage recurring income and commitments, identify potential duplicates, and provide reminders.</p>
+    <ul>
+      <li><strong>Financial records:</strong> amounts, income/expense type, dates, categories, category icons, account labels, notes, descriptions and payment references. Account or UPI identifiers can be present in information you enter or import.</li>
+      <li><strong>Budget settings:</strong> regular income sources, commitments, amounts, paid/credited status, linked transactions and monthly plans.</li>
+      <li><strong>Local profile:</strong> your chosen nickname. If you use Google sign-in, Nidhi can also store the name, email address and profile-photo URL supplied by Google.</li>
+      <li><strong>Preferences:</strong> appearance, selected payment apps and bank senders, reminders, summary times, backup settings, app-lock choices, and whether introductory guidance has been shown.</li>
+      <li><strong>Import bookkeeping:</strong> local transaction links and message fingerprints used to avoid processing the same event repeatedly. These are not used for advertising or profiling.</li>
+    </ul>
+    <p>A nickname creates a local profile, not a ledger account on a developer-operated server. Nidhi does not need your bank login password, banking PIN or OTP to track transactions. Do not enter those secrets into notes or support messages.</p>
+  </section>
+
+  <section id="sms">
+    <h2>2. Optional bank SMS reading</h2>
+    <p><strong>Purpose:</strong> SMS-based money management—recognizing bank debit and credit alerts to help record income and expenses. SMS reading is off by default.</p>
+    <p>To enable it, open <strong>Settings → Permissions &amp; notifications → Automatic transactions · SMS</strong>, review the in-app disclosure, grant the requested SMS permissions, and choose bank senders. <code>READ_SMS</code> supports importing existing messages; <code>RECEIVE_SMS</code> supports recognizing new incoming alerts, including while Nidhi is not open.</p>
+    <p>Android SMS permissions can expose inbox content and incoming messages. Existing-message import reads this month’s inbox and applies bank-sender and financial-message filters on your device. Incoming alerts are filtered on-device as well. The app is designed to ignore nonmatching messages, OTPs, verification codes, promotional content, failed or pending payments, and unclear alerts.</p>
+    <p>Nidhi saves recognized transaction details, such as amount, direction, time, reference, source or masked account information, and a duplicate-detection fingerprint. It does not save the complete raw SMS body as a ledger record or upload raw SMS history to the developer. Parsed ledger entries can be included in an export or optional Google Drive backup you enable.</p>
+    <p>Turn this feature off in Nidhi and/or revoke SMS permission in Android settings to stop future SMS importing. Previously imported entries remain until you delete them. Nidhi does not send SMS, act as your default messaging app, or request Call Log access.</p>
+  </section>
+
+  <section id="notifications">
+    <h2>3. Optional payment-notification reading</h2>
+    <p>Notification reading is off by default. Enable it through <strong>Settings → Permissions &amp; notifications → Automatic transactions · Notifications</strong>, review the disclosure, grant notification access in Android, and choose the payment or banking apps to process.</p>
+    <p>Android notification access is broad and can expose sensitive notification content. Nidhi checks the source app and processes transaction notifications from selected apps to identify financial entries. Selected app names, icons and package identifiers are used for the chooser and local filtering. Nidhi queries launchable installed apps for this selection; it does not send that installed-app list to a developer server.</p>
+    <p>Recognized financial fields and duplicate-detection information are processed locally. Complete raw notification text is not stored as an import archive or sent to the developer. Imported ledger details may later be included in backups or exports. Disable the switch or revoke Android notification access to stop future processing. Existing imported records are not deleted automatically.</p>
+    <p>Automatic recognition and duplicate matching are not guaranteed to identify every message correctly. Review imported entries in History and correct or remove inaccurate records.</p>
+  </section>
+
+  <section id="images">
+    <h2>4. Screenshots, camera and QR tools</h2>
+    <p>When you select or share a payment screenshot, Nidhi reads the selected image to extract candidate transaction details for review. Text recognition uses Google ML Kit on your device. Your selected image and recognized text are not sent to a developer-operated OCR server.</p>
+    <p>Camera access is requested for scanning QR codes. File or image access is used when you choose content to import; older Android versions may request storage permission for image selection. Denying those permissions leaves manual transaction entry available.</p>
+    <p>QR transfer and sharing tools can reveal the records or payment information you choose to display or share. A person or app receiving a QR code, image or exported file can read its contents. Review the destination before sharing.</p>
+  </section>
+
+  <section id="backups">
+    <h2>5. Google sign-in, backups and sharing</h2>
+    <h3>Google account access</h3>
+    <p>Google sign-in and Drive connection use Google’s authorization screens. Nidhi receives the account information and access authorization needed for the selected feature; it does not receive your Google password. Drive access uses the <code>drive.file</code> scope for files created or opened through the app’s authorized workflow.</p>
+    <h3>Optional Google Drive backup</h3>
+    <p>If you connect Drive and request backup, your transaction records and supported monthly-plan information are uploaded to your Google Drive. Backup files and related sync metadata are stored in the app’s <strong>MoneyLedger_Backup</strong> folder. If you separately enable automatic backup, it can run in the background while your account remains connected.</p>
+    <p>Google processes account, connection and storage information under its own policies. You can disable automatic backup, disconnect Drive, or revoke the connection through your Google Account. Disconnecting does not delete existing Drive files.</p>
+    <h3>Local exports and Android backup</h3>
+    <p>You choose the destination for spreadsheet exports and the source for imports using Android’s file picker. A location may be local storage or another provider, including a cloud provider. That provider handles the file under its own policies.</p>
+    <p>Android’s system backup or device-transfer features may also copy Nidhi’s database and preferences when enabled on your device. These are separate from Nidhi’s optional Drive backup and are controlled through your Android and backup-account settings.</p>
+    <div class="notice"><strong>Exported spreadsheets and QR transfers are not encrypted by Nidhi.</strong> App lock does not encrypt these copies. Anyone with access to an exported file or displayed QR data may be able to read it. Keep sensitive copies in a location you trust.</div>
+    <p>We do not sell or rent your personal or financial information, use bank messages for advertising, or operate a service that receives your ledger for marketing or model training. Information is transferred to providers when needed for features you choose, such as Google sign-in, Drive backup or external sharing.</p>
+  </section>
+
+  <section id="permissions">
+    <h2>6. Permissions, reminders and spending notifications</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Access</th><th scope="col">Purpose and choice</th></tr></thead>
+      <tbody>
+        <tr><td>SMS reading and receipt</td><td>Optional bank-transaction import, after disclosure and permission. Off by default.</td></tr>
+        <tr><td>Notification-listener access</td><td>Optional reading of transaction alerts from payment apps you select. Off by default.</td></tr>
+        <tr><td>Permission to post notifications</td><td>Transaction reminders, spending summaries and live spending status. This does not grant permission to read other apps’ notifications.</td></tr>
+        <tr><td>Biometric/device authentication</td><td>Optional app lock, using Android’s authentication system. Off by default.</td></tr>
+        <tr><td>Camera and selected images/files</td><td>QR scanning, payment-screenshot recognition, and importing/exporting files you choose.</td></tr>
+        <tr><td>Internet and network status</td><td>Google sign-in/Drive, SDK model or service communication, and user-selected online features.</td></tr>
+        <tr><td>Alarm scheduling and boot events</td><td>Scheduling chosen reminder/summary times and restoring schedules after restart. Android may delay background work.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Transaction reminders prompt you to enter missing records. Spending summaries report your allowance or spending at the morning and night times you choose. Live status can show your spending amount, limit and percentage in the notification shade. These may reveal financial information to people who can see your screen; use Android’s lock-screen notification controls if needed.</p>
+    <p>The tour is guidance, not permission. Skipping it does not enable SMS reading, notification reading, app lock or Drive backup. Sensitive features require their relevant switches, disclosures and Android permissions. You can change them later in Settings.</p>
+  </section>
+
+  <section id="security">
+    <h2>7. App lock and security</h2>
+    <p>Biometric app lock is optional and off by default. When enabled on a device with a configured screen lock, Android verifies your fingerprint, compatible face authentication or device PIN/pattern/password. Nidhi receives the authentication result, not your biometric template or device-lock secret.</p>
+    <p>The default background grace period is one minute. You can choose Immediately, 30 seconds, 1 minute or 5 minutes in the app-lock card. Turning off the device screen invalidates the app session immediately. Authentication is also required when a new app process has no authenticated session. Short trips to a file picker can stay within the chosen grace period.</p>
+    <p>If the session has expired, import/export waits for successful unlock. An import that cannot meet the authentication check before committing is cancelled without partial database changes. Without a device screen lock, biometric protection cannot be activated; Settings explains how to configure one.</p>
+    <p>Ledger data is kept in app-private Android storage. App lock is an access control, not a claim of end-to-end encryption or separate database encryption. Device security, system backups, exported files, and your Google Account remain important. No storage or transmission method can be guaranteed completely secure.</p>
+  </section>
+
+  <section id="services">
+    <h2>8. Service providers and technical diagnostics</h2>
+    <p>Nidhi uses Google Play services, Google Sign-In, Google Drive APIs and Google ML Kit for the features described above. Nidhi does not include its own advertising or behavioral-tracking system.</p>
+    <p>According to Google’s ML Kit documentation, input images and recognition results are processed on-device. ML Kit may contact Google for models or updates and send SDK usage, performance, app and device information for diagnostics and service improvement. This technical processing is separate from uploading your payment screenshots or ledger to the developer.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a></li>
+      <li><a href="https://developers.google.com/ml-kit/terms" rel="noopener noreferrer">ML Kit terms and privacy</a></li>
+      <li><a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener noreferrer">ML Kit Android data disclosure</a></li>
+    </ul>
+    <p>If you contact support, we receive the email address and information you choose to send. We use it to answer your request and resolve the issue. Please remove sensitive transaction details from screenshots unless they are needed, and never send passwords, OTPs or banking PINs.</p>
+  </section>
+
+  <section id="retention">
+    <h2>9. How long information remains</h2>
+    <p>Local ledger entries, monthly plans, settings and import fingerprints remain until removed through the relevant controls or until the app’s storage is cleared. Revoking a permission stops future access but does not remove previously imported data.</p>
+    <p>Drive backups, exported files, copies shared with other apps, and Android backups can outlive the local app installation. They remain under the applicable account, file provider or recipient’s retention rules until removed there. Support correspondence is retained as needed to handle the request and meet applicable obligations.</p>
+  </section>
+
+  <section id="delete">
+    <h2>10. Your choices, access and deletion</h2>
+    <ol>
+      <li><strong>Review or correct records:</strong> use History to view, edit or delete transactions.</li>
+      <li><strong>Stop automatic imports:</strong> disable SMS/notification reading in Nidhi and, if desired, revoke the corresponding Android permission or notification access.</li>
+      <li><strong>Delete transactions:</strong> use <strong>Settings → Data management → Delete all data</strong> and its confirmations. The current control deletes transactions; recurring plans, categories, preferences and local profile information may remain.</li>
+      <li><strong>Erase all local app information:</strong> use <strong>Android Settings → Apps → Nidhi → Storage → Clear storage/data</strong>. Menu names vary by device. This removes the app’s local database, profile and settings. Export anything you want to keep first.</li>
+      <li><strong>Remove cloud/file copies:</strong> disable automatic backup, delete the <strong>MoneyLedger_Backup</strong> folder or its files from Google Drive, and empty Drive’s bin if appropriate. Separately delete exports from Downloads, other file providers, recipients and system backups you control.</li>
+      <li><strong>Disconnect Google:</strong> use Nidhi’s Drive disconnect control and manage/revoke the Nidhi connection in your Google Account. Signing out or disconnecting does not itself erase your ledger or previously created backups, and does not delete your Google Account.</li>
+    </ol>
+    <p>To request privacy or deletion assistance outside the app, email <a href="mailto:clef2k22@gmail.com?subject=Nidhi%20privacy%20or%20deletion%20request">clef2k22@gmail.com</a> with the subject <strong>Nidhi privacy or deletion request</strong>. We can help with controls and address information you have provided directly to support. Because we do not hold your local ledger on a developer server, an email cannot remotely erase your phone, your Google Account, or copies controlled by other providers.</p>
+    <p>Depending on your location, you may have rights concerning access, correction, deletion, restriction or withdrawal of consent. Contact us to discuss a request. Withdrawing optional access does not undo processing already completed or automatically delete saved records.</p>
+  </section>
+
+  <section id="children">
+    <h2>11. Children and family use</h2>
+    <p>Nidhi is not directed to children under 13. We do not knowingly solicit personal information from children under 13. If you are a parent or guardian and believe a child has provided personal information to us through support, contact us so we can address it. Parents or guardians should supervise use where required by applicable rules.</p>
+  </section>
+
+  <section id="website">
+    <h2>12. This privacy-policy website</h2>
+    <p>This page is hosted on GitHub Pages. The page itself contains no analytics scripts, advertising, tracking pixels or external fonts. GitHub may log visitor IP addresses and other request information to operate and protect its hosting service. Following an external link or sending an email uses that destination’s services and policies.</p>
+    <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a></p>
+  </section>
+
+  <section id="changes">
+    <h2>13. Changes to this policy</h2>
+    <p>We may revise this page when Nidhi’s features or data practices change. The date at the top identifies the latest revision. Changes requiring additional permission or consent will use the appropriate in-app disclosure and controls; a policy update alone is not permission to enable an optional sensitive feature.</p>
+  </section>
+
+  <section id="contact">
+    <h2>14. Contact &amp; developer</h2>
+    <p>For privacy questions, deletion assistance or support, email <a href="mailto:clef2k22@gmail.com">clef2k22@gmail.com</a>. Include “Nidhi” in your subject line. Do not send passwords, OTPs or complete financial backups.</p>
+    <div class="developer-card" aria-label="Developer and contact links">
+      <span class="developer-eyebrow">DESIGNED AND DEVELOPED BY</span>
+      <h3>Pruthvi Raj CP</h3>
+      <div class="developer-links">
+        <a class="portfolio-link" href="https://ram-clef.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Visit my portfolio <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/pruthviraj-cp/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/pruthviraj1441" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="mailto:clef2k22@gmail.com">Email the developer</a>
+        <a href="https://play.google.com/store/apps/details?id=in.clef.nidhi" target="_blank" rel="noopener noreferrer">Nidhi on Google Play <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
 
-    <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Nidhi mobile application (the "Service") and tells You about Your privacy rights and how the law protects You.</p>
+  </section>
+  <footer>Nidhi — Offline-first income, expense and budget management.<br>
+    © 2026 Pruthvi Raj CP · <a href="#top">Back to top</a></footer>
 
-    <p>We use Your Personal data only to provide and improve the Service. By using Nidhi, You agree to the collection and use of information in accordance with this Privacy Policy. <strong>All your financial records (income, expenses, categories, accounts) are stored exclusively on your device using an encrypted local database. We never access, sell, or transmit your financial data to external servers.</strong></p>
-
-    <h2>Interpretation and Definitions</h2>
-    <h3>Interpretation</h3>
-    <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-
-    <h3>Definitions</h3>
-    <div class="definitions">
-        <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service (optional Google Sign-In).</p>
-        <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
-        <p><strong>Application</strong> refers to Nidhi, the software program provided by the Company.</p>
-        <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Nidhi.</p>
-        <p><strong>Country</strong> refers to: Karnataka, India.</p>
-        <p><strong>Device</strong> means any device that can access the Service such as a smartphone or a digital tablet.</p>
-        <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual. For Nidhi, this includes: first name and last name (optional offline profile), email address (only if you sign in with Google), and Usage Data.</p>
-        <p><strong>Service</strong> refers to the Nidhi Application.</p>
-        <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
-        <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, crash reports or diagnostic data).</p>
-        <p><strong>You</strong> means the individual accessing or using the Service, or the legal entity on behalf of which such individual is accessing the Service.</p>
-    </div>
-
-    <h2>Collecting and Using Your Personal Data</h2>
-    <h3>Types of Data Collected</h3>
-    
-    <h4>Personal Data</h4>
-    <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-    <ul>
-        <li>First name and last name (optional, stored locally if you choose to set a profile name)</li>
-        <li>Email address (only if you voluntarily sign in with Google for backup/restore)</li>
-        <li>Usage Data</li>
-    </ul>
-    <p><strong>Important:</strong> Nidhi does <strong>not</strong> collect your financial transaction data (amounts, categories, accounts). All financial records remain in the local Room database on your device. We have no servers that store your income or expense information.</p>
-
-    <h4>Google Sign-In (Optional)</h4>
-    <p>If you choose to enable backup and restore via Google Drive, Nidhi uses Google Sign-In. When you sign in, we receive your name, email address, and profile picture URL. <strong>Your transaction data is never stored on our servers</strong> — it remains on your device or inside your private Google Drive (if you initiate backup). You may sign out at any time, and all backup data stays under your Google account control.</p>
-
-    <h4>Usage Data</h4>
-    <p>Usage Data is collected automatically when using the Service. This may include information such as Your Device's Internet Protocol address (e.g. IP address), device type, operating system version, unique device identifiers, diagnostic data, and interaction with the app (e.g., feature usage). We use this data only to improve stability and performance; we do not sell or share it with advertisers.</p>
-
-    <h4>Screenshot Import (Premium Feature – On‑Device OCR)</h4>
-    <p>When You use the screenshot import feature, images are processed locally using on-device Optical Character Recognition (OCR). No image or extracted text is ever uploaded to any external server. The extracted data (amount, date, description) is only used to pre‑fill the transaction form for your convenience.</p>
-
-    <h4>QR Code Data Transfer (Device‑to‑Device)</h4>
-    <p>Nidhi allows you to transfer transaction data between devices using QR codes. This transfer occurs directly between devices — no intermediate servers or cloud storage are involved. The receiving device reconstructs the data locally.</p>
-
-    <h3>Use of Your Personal Data</h3>
-    <p>The Company may use Personal Data for the following purposes:</p>
-    <ul>
-        <li><strong>To provide and maintain our Service</strong>, including to monitor usage and fix technical issues.</li>
-        <li><strong>To manage Your Account (optional Google Sign-In)</strong>: to provide backup/restore functionality.</li>
-        <li><strong>To contact You:</strong> To notify you about important updates, security notices or changes to the Privacy Policy via email (only if you provided email).</li>
-        <li><strong>To manage Your requests:</strong> To attend and manage inquiries sent to clef2k22@gmail.com.</li>
-        <li><strong>For business transfers:</strong> In case of merger, acquisition, or asset sale, Your Personal Data may be transferred. We will notify you before any transfer.</li>
-        <li><strong>For other purposes:</strong> data analysis, understanding usage trends, and improving the application. All such analysis is aggregated and does not identify individual users.</li>
-    </ul>
-
-    <h3>Sharing Your Personal Information</h3>
-    <p>We do not sell or rent your personal information. We may share Your information only in the following situations:</p>
-    <ul>
-        <li><strong>With Service Providers:</strong> We may share limited data (e.g., crash analytics) with Service Providers to monitor and improve app performance. These providers are bound by confidentiality agreements.</li>
-        <li><strong>For business transfers:</strong> If Nidhi is involved in a merger, acquisition, or asset sale, Your Personal Data may be transferred. We will provide notice before transfer.</li>
-        <li><strong>With Your consent:</strong> We may disclose your personal information for any other purpose with your explicit consent.</li>
-        <li><strong>Legal requirements:</strong> We may disclose data if required by law or in response to valid requests by public authorities (e.g., court order).</li>
-    </ul>
-
-    <h3>Retention of Your Personal Data</h3>
-    <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. Since financial data stays on your device, you control its deletion. Usage Data may be retained for a shorter period unless needed for security or legal compliance.</p>
-
-    <h3>Transfer of Your Personal Data</h3>
-    <p>Your information, including Personal Data, may be processed at the Company's operating offices or via Google’s infrastructure (when using optional Google Sign-In). Your consent to this Privacy Policy represents Your agreement to that transfer. The Company will take steps to ensure that your data is treated securely and in accordance with this Privacy Policy.</p>
-
-    <h3>Delete Your Personal Data</h3>
-    <p>You have the right to delete or request that We assist in deleting the Personal Data that we have collected about You. Within Nidhi, you can:</p>
-    <ul>
-        <li>Delete individual transactions or use <strong>“Delete All Data”</strong> in Settings to permanently erase all financial records from your device.</li>
-        <li>Sign out of Google Sign-In (if used) to remove authentication data.</li>
-        <li>Uninstall the application to remove all locally stored data.</li>
-    </ul>
-    <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
-
-    <h3>Disclosure of Your Personal Data</h3>
-    <h4>Business Transactions</h4>
-    <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-
-    <h4>Law enforcement</h4>
-    <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-
-    <h4>Other legal requirements</h4>
-    <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-    <ul>
-        <li>Comply with a legal obligation</li>
-        <li>Protect and defend the rights or property of the Company</li>
-        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-        <li>Protect the personal safety of Users of the Service or the public</li>
-        <li>Protect against legal liability</li>
-    </ul>
-
-    <h3>Security of Your Personal Data</h3>
-    <p>The security of Your Personal Data is important to Us. Nidhi stores financial records in an encrypted Room database on your device. Data transmitted during optional Google Drive backup uses industry-standard TLS encryption. However, remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-
-    <h2>Children's Privacy</h2>
-    <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-
-    <h2>Links to Other Websites</h2>
-    <p>Our Service may contain links to other websites that are not operated by Us (e.g., support resources, GitHub). If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
-
-    <h2>Changes to this Privacy Policy</h2>
-    <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.</p>
-    <p>We will let You know via email (if you provided one) and/or a prominent notice within the application, prior to the change becoming effective. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-    <ul class="contact-links">
-        <li>📧 By email: <a href="mailto:clef2k22@gmail.com">clef2k22@gmail.com</a></li>
-        <li>👨‍💻 Developer Portfolio: <a href="https://ram-clef.github.io/portfolio/" target="_blank" rel="noopener noreferrer">https://ram-clef.github.io/portfolio/</a></li>
-    </ul>
-
-    <hr />
-    <footer>
-        Nidhi – Offline‑first expense tracker. Your data never leaves your device unless you choose to back up to your own Google Drive.<br>
-        © 2026 Nidhi. All rights reserved.
-    </footer>
-</div>
+</main>
 </body>
 </html>
